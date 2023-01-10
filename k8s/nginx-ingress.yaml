@@ -5,16 +5,16 @@ metadata:
 spec:
   tls:
   - hosts:
-    - nginx.minikube
-    secretName: nginx-minikube
+    - nginx2.minikube
+    secretName: nginx2-minikube
   rules:
-  - host: nginx.minikube
+  - host: nginx2.minikube
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: nginx
+            name: my-nginx
             port:
               number: 443
